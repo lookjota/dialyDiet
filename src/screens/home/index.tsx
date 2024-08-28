@@ -1,4 +1,6 @@
+import { Header } from "@components/Header";
 import { Container, styles, Title } from "./styles";
+import { Typography } from "@components/Typography";
 
 
 
@@ -6,7 +8,11 @@ import { Container, styles, Title } from "./styles";
 export function HomeScreen() {
   return (
     <Container>
-      <Title>Home Screen test</Title>
+      <Header/>
+      <Typography textAlign="right">Home Screen</Typography>
+      <Typography fontFamily="bold">Home Screen</Typography>
+      <Typography>Home Screen</Typography>
+
     </Container>
   )
 }

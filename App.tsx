@@ -1,4 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
+import { StatusBar } from 'react-native';
 import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
 
 import { AntDesign } from '@expo/vector-icons'
@@ -13,6 +13,7 @@ import { ThemeProvider } from 'styled-components/native'
 
 import { HomeScreen } from '@screens/home/index';
 import theme from '@theme';
+import { Loading } from '@components/Loading';
 
 export default function App() {
 
@@ -25,16 +26,12 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-
-        
-        {fontsLoaded ? (
-          <HomeScreen />
-        ) : (
-          <ActivityIndicator color="#000" size="large" />
-        )}
-        
-        
-        <StatusBar style="auto" />
+        <StatusBar  
+          barStyle="dark-content"
+          backgroundColor="transparent"
+          translucent
+        />
+        {fontsLoaded ? <HomeScreen /> : <Loading  />}
     </ThemeProvider>
   );
 }
