@@ -1,6 +1,7 @@
 import styled from "styled-components/native"
 import { CardColor } from "."
-import arrowUp from '@assets/arrow-up-right.svg'
+
+import { ArrowLeft, ArrowUpRight }from 'phosphor-react-native'
 
 
 export const Container = styled.View<CardColor>`
@@ -31,7 +32,38 @@ export const ButtonToStaticRight = styled.TouchableOpacity`
   right: 9px;
 `
 
-export const IconArrowUpRight = styled(arrowUp)``
+export const ButtonToStaticLeft = styled.TouchableOpacity`
+  position: absolute;
+  top: 8px;
+  left: 9px;
+`
+
+export const IconArrowUpRight = styled(ArrowUpRight).attrs<CardColor>(
+  ({ theme, bg }) => ({
+    size: 24,
+    color:
+      bg === 'green'
+      ? theme.colors.brand.green_dark
+      : bg === 'red'
+      ? theme.colors.brand.red_dar
+      : theme.colors.base.gray_1,
+  }),
+)<CardColor>``
+
+
+
+
+export const IconArrowLeft = styled(ArrowLeft).attrs<CardColor>(
+  ({ theme, bg }) => ({
+    size: 24,
+    color:
+      bg === 'green'
+      ? theme.colors.brand.green_dark
+      : bg === 'red'
+      ? theme.colors.brand.red_dar
+      : theme.colors.base.gray_1,
+  }),
+)<CardColor>``
 
 
 

@@ -8,7 +8,13 @@ export function HomeScreen() {
   return (
     <Container>
       <Header/>
-      <Card title="90,86%" subtitle="das refeicoes dentro da dieta" bg="gray"/>
+      <Card 
+        title="90,86%" 
+        subtitle="das refeicoes dentro da dieta" 
+        bg="gray"
+        iconPosition="right"
+        onPress={() => console.log('Clicou!')}
+      />
     </Container>
   )
 }
