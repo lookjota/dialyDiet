@@ -1,7 +1,6 @@
 import { Header } from "@components/Header";
-import { Container, styles, Title } from "./styles";
-import { Typography } from "@components/Typography";
-
+import { Container } from "./styles";
+import { Card } from "@components/Card";
 
 
 
@@ -9,10 +8,7 @@ export function HomeScreen() {
   return (
     <Container>
       <Header/>
-      <Typography textAlign="right">Home Screen</Typography>
-      <Typography fontFamily="bold">Home Screen</Typography>
-      <Typography>Home Screen</Typography>
-
+      <Card title="90,86%" subtitle="das refeicoes dentro da dieta" bg="gray"/>
     </Container>
   )
 }
